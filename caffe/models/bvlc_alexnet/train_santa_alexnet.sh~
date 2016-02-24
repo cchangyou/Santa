@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+#./build/tools/caffe train --solver=models/bvlc_alexnet/solver_santa.prototxt 2>>/data/results_ccy/imagenet/santa_1e-7.log #--snapshot=models/bvlc_alexnet/caffe_alexnet_train_iter_40000.solverstate
+
+#./build/tools/caffe train --solver=models/bvlc_alexnet/solver_santa_pc.prototxt 2>>/data/results_ccy/imagenet/santa_nopc.log
+
+./build/tools/caffe train --solver=models/bvlc_alexnet/solver_santa_pc_fixs.prototxt --snapshot=/data/results_ccy/imagenet/caffe_alexnet_santa_nopc_iter_100000.solverstate 2>>/data/results_ccy/imagenet/santa_nopc_fixs.log
+
+#./build/tools/caffe train --solver=models/bvlc_alexnet/solver_santa.prototxt --snapshot=/data/results_ccy/imagenet/caffe_alexnet_santa_nopc_iter_100000.solverstate 2>>/data/results_ccy/imagenet/santa_nopc_fixs.log
+
+# ./build/tools/caffe train --solver=examples/mnist/lenet_solver_rmsprop.prototxt
+# ./build/tools/caffe train --solver=examples/mnist/lenet_solver.prototxt --snapshot=./examples/mnist/lenet_iter_10000.solverstate

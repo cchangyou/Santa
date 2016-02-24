@@ -1,0 +1,30 @@
+net: "models/bvlc_alexnet/train_val.prototxt"
+test_iter: 1000
+test_interval: 1000
+base_lr: 0.01
+### no preconditioner
+pc: 0
+### #training data
+nD: 1200000
+### same as in the paper
+C: 10000
+sigma: 0.999
+lambda: 1e-8
+### annealing = anneal_a * (t + anneal_b)^anneal_c
+anneal_a: 1
+anneal_b: 0
+anneal_c: 2
+approx_g: 0
+lr_policy: "step"
+gamma: 0.1
+stepsize: 100000
+display: 20
+max_iter: 450000
+explore: 200000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 10000
+snapshot_prefix: "models/bvlc_alexnet/caffe_alexnet_santa"
+solver_mode: GPU
+type: "Santae"
+# device_id: 1
