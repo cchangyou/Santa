@@ -1,0 +1,17 @@
+This code is written in MATLAB, extracted from a large system we implemented. It consists of FNN and CNN. To run the CNN, you further need:
+
+* MatConvNet (http://www.vlfeat.org/matconvnet/). We use version: matconvnet-1.0-beta12
+
+This code runs on CPU, but the GPU implementation is also provided in the code.
+
+## How to use the code
+
+Run the FNN experiments: 
+-- simply run the scripts: test_FNN_400.m and test_FNN_800.m
+
+Run the CNN experiments: 
+-- first install MatConvNet
+-- then set the path in environmentVariables.m
+-- run test_cnn.m
+
+These will give similar results reported in the paper.
